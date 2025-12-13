@@ -1,0 +1,57 @@
+# Legal Notices
+
+## CourtListener API Type Definitions
+
+Copyright (c) 2025 LawForge
+
+## CourtListener API
+
+This project provides TypeScript type definitions for the CourtListener API.
+
+**CourtListener** is developed by the [Free Law Project](https://free.law/).
+
+- Website: <https://www.courtlistener.com/>
+- API Documentation: <https://www.courtlistener.com/api/>
+- GitHub: <https://github.com/freelawproject/courtlistener>
+
+## Third-Party Components
+
+This package includes or references the following third-party components:
+
+### Zod
+
+- **License**: MIT
+- **Copyright**: Colin McDonnell
+- **Repository**: <https://github.com/colinhacks/zod>
+- **Used for**: Runtime type validation schemas
+
+### TypeScript
+
+- **License**: Apache License 2.0
+- **Copyright**: Microsoft Corporation
+- **Repository**: <https://github.com/microsoft/TypeScript>
+- **Used for**: Type definitions and compilation
+
+## OpenAPI Specification
+
+The OpenAPI specification files in `tools/openapi/` are generated from the CourtListener API and are subject to CourtListener's terms of service and licensing.
+
+## Attribution
+
+These type definitions are maintained independently and are not officially affiliated with or endorsed by the Free Law Project or CourtListener.
+
+## License Compliance
+
+All components included in this distribution comply with their respective licenses. This project aims to maintain license compatibility and attribution requirements for all dependencies.
+
+## Contact
+
+For questions about these type definitions:
+
+- GitHub Issues: <https://github.com/drengskapur/lawforge-courtlistener-types/issues>
+- Email: [project contact information]
+
+For questions about CourtListener itself:
+
+- Website: <https://www.courtlistener.com/>
+- Contact: <https://free.law/contact/>
