@@ -5,6 +5,7 @@
 We take security seriously. This project provides TypeScript type definitions and does not contain runtime code that could introduce security vulnerabilities. However, we maintain security best practices and respond to reports.
 
 Currently supported versions for security updates:
+
 - **Latest version** - Full support
 - **Previous major version** - Security fixes only
 - **Older versions** - Not supported
@@ -18,6 +19,7 @@ If you discover a security vulnerability in this project, please report it respo
 **Please do NOT report security vulnerabilities through public GitHub issues.**
 
 Instead, please report security vulnerabilities by emailing:
+
 - **Email**: [security contact email]
 - **Subject**: `[SECURITY] Vulnerability in @types/lawforge__courtlistener`
 
@@ -65,6 +67,7 @@ When contributing to this project:
 ## Known Security Considerations
 
 ### Type-Only Package
+
 This is a type-only package that ships no runtime JavaScript code. The primary security considerations are:
 
 - **Supply Chain Attacks**: Dependencies are monitored via automated tools
@@ -72,6 +75,7 @@ This is a type-only package that ships no runtime JavaScript code. The primary s
 - **Build Process**: The package build process is transparent and auditable
 
 ### API-Related Security
+
 While this package defines types for the CourtListener API, actual API security is handled by:
 
 - CourtListener's API authentication and authorization
@@ -85,6 +89,7 @@ Security updates will be released as patch versions with high priority. Subscrib
 ## Contact
 
 For security-related questions or concerns:
+
 - **Security Issues**: Use the reporting process above
 - **General Questions**: [contact information]
 
