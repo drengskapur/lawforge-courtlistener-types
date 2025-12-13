@@ -1,0 +1,55 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreUnstable",
+    "group:monorepos",
+    "group:recommended",
+    "workarounds:all"
+  ],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "description": "Group all TypeScript-related packages together",
+      "groupName": "typescript",
+      "matchPackagePatterns": [
+        "^@types/",
+        "^typescript$",
+        "^tsx$"
+      ]
+    },
+    {
+      "description": "Group all linting/formatting tools",
+      "groupName": "linting",
+      "matchPackagePatterns": [
+        "^@biomejs/",
+        "^eslint",
+        "^prettier"
+      ]
+    },
+    {
+      "description": "Be more conservative with major updates for types packages",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"],
+      "schedule": ["before 4am on Monday"],
+      "prBodyNotes": [
+        "This is a major update that may introduce breaking changes. Please review carefully."
+      ]
+    }
+  ],
+  "schedule": ["before 4am on Monday"],
+  "timezone": "America/New_York",
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 10,
+  "assignees": ["@drengskapur"],
+  "reviewers": ["@drengskapur"],
+  "vulnerabilityAlerts": {
+    "enabled": true
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 4am on Monday"]
+  }
+}
