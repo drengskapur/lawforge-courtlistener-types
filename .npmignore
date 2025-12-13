@@ -1,22 +1,78 @@
 # Development files
 tools/
 src/
+tests/
+__tests__/
+*.test.ts
+*.spec.ts
 tsconfig.json
+tsconfig.*.json
+vitest.config.ts
+
+# Dependencies
 node_modules/
 package-lock.json
-.npmignore
 
 # Build artifacts
 *.tsbuildinfo
+dist/
+build/
+coverage/
 
-# IDE files
+# Documentation
+docs/
+mkdocs.yml
+.readthedocs.yaml
+
+# IDE/Editor
 .vscode/
 .idea/
+*.sublime-*
+*.swp
+*.swo
 
 # OS files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# GitHub
+.github/
+
+# Config files
+.editorconfig
+.eslintrc*
+.prettierrc*
+biome.json
+cliff.toml
+renovate.json
+.markdownlint*
+.nvmrc
 
 # Logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# CI/CD
+.circleci/
+.travis.yml
+.gitlab-ci.yml
+Jenkinsfile
+
+# Misc
+*.md
+!README.md
+LICENSE
+CHANGELOG.md
+CONTRIBUTING.md
+SECURITY.md
+CODE_OF_CONDUCT.md
+examples/
+scripts/
