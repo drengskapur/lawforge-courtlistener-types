@@ -1,6 +1,6 @@
 site_name: CourtListener TypeScript Types
 site_description: TypeScript type definitions for the CourtListener legal research API
-site_url: https://drengskapur.github.io/lawforge-courtlistener-types
+site_url: https://lawforge-courtlistener-types.readthedocs.io
 repo_url: https://github.com/drengskapur/lawforge-courtlistener-types
 repo_name: drengskapur/lawforge-courtlistener-types
 
