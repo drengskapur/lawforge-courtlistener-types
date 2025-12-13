@@ -5,7 +5,7 @@ repository:
   # Repository metadata
   name: lawforge-courtlistener-types
   description: TypeScript type definitions for CourtListener API
-  homepage: https://github.com/drengskapur/lawforge-courtlistener-types
+  homepage: https://lawforge-courtlistener-types.readthedocs.io
   topics: typescript, types, courtlistener, legal, api, definitions
 
   # Repository features
