@@ -50,8 +50,8 @@ coverage/
 # Optional npm cache directory
 .npm
 
-# Optional eslint cache
-.eslintcache
+# Optional biome cache
+.biome-cache
 
 # Microbundle cache
 .rpt2_cache/
