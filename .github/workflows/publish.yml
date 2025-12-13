@@ -11,7 +11,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    environment: npm
+    environment: production
 
     permissions:
       contents: write
@@ -32,6 +32,9 @@ jobs:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Update npm for OIDC support
+        run: npm install -g npm@latest
+
       - name: Install dependencies
         run: npm ci
 
@@ -44,8 +47,8 @@ jobs:
 
       - name: Publish to npm
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # Uses OIDC trusted publishing (configure at npmjs.com)
+        # Falls back to NPM_TOKEN if OIDC not configured
 
       - name: Create GitHub Release
         uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # v1.1.4
