@@ -1,5 +1,5 @@
 {
-  "name": "@types/lawforge__courtlistener",
+  "name": "lawforge-courtlistener-types",
   "version": "4.3.0",
   "description": "TypeScript definitions for CourtListener API",
   "types": "index.d.ts",
