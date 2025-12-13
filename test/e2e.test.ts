@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll } from "vitest";
+import { describe, it, expect, beforeAll } from 'vitest';
 import {
   CourtsResponseSchema,
   PeopleResponseSchema,
@@ -7,14 +7,14 @@ import {
   DocketsResponseSchema,
   AudioResponseSchema,
   SearchResponseSchema,
-} from "./schemas";
+} from './schemas';
 
-const BASE_URL = "https://www.courtlistener.com/api/rest/v4";
+const BASE_URL = 'https://www.courtlistener.com/api/rest/v4';
 const API_TOKEN = process.env.COURTLISTENER_API_TOKEN;
 
 async function fetchAPI(endpoint: string) {
   const headers: Record<string, string> = {
-    Accept: "application/json",
+    Accept: 'application/json',
   };
 
   if (API_TOKEN) {
@@ -30,7 +30,7 @@ async function fetchAPI(endpoint: string) {
   return response.json();
 }
 
-describe("CourtListener API e2e", () => {
+describe('CourtListener API e2e', () => {
   let apiReachable = true;
 
   beforeAll(async () => {
@@ -39,24 +39,24 @@ describe("CourtListener API e2e", () => {
       const timeout = setTimeout(() => controller.abort(), 5000);
       await fetch(`${BASE_URL}/courts/?page_size=1`, {
         signal: controller.signal,
-        headers: { Accept: "application/json" },
+        headers: { Accept: 'application/json' },
       });
       clearTimeout(timeout);
     } catch {
       apiReachable = false;
-      console.warn("CourtListener API not reachable, skipping e2e tests");
+      console.warn('CourtListener API not reachable, skipping e2e tests');
     }
   });
 
-  describe("Courts", () => {
-    it("validates /courts/ response", async ({ skip }) => {
+  describe('Courts', () => {
+    it('validates /courts/ response', async ({ skip }) => {
       if (!apiReachable) skip();
 
-      const data = await fetchAPI("/courts/?page_size=5");
+      const data = await fetchAPI('/courts/?page_size=5');
       const result = CourtsResponseSchema.safeParse(data);
 
       if (!result.success) {
-        console.error("Validation errors:", JSON.stringify(result.error.issues, null, 2));
+        console.error('Validation errors:', JSON.stringify(result.error.issues, null, 2));
       }
 
       expect(result.success).toBe(true);
@@ -64,15 +64,15 @@ describe("CourtListener API e2e", () => {
     });
   });
 
-  describe("People", () => {
-    it("validates /people/ response", async ({ skip }) => {
+  describe('People', () => {
+    it('validates /people/ response', async ({ skip }) => {
       if (!apiReachable) skip();
 
-      const data = await fetchAPI("/people/?page_size=5");
+      const data = await fetchAPI('/people/?page_size=5');
       const result = PeopleResponseSchema.safeParse(data);
 
       if (!result.success) {
-        console.error("Validation errors:", JSON.stringify(result.error.issues, null, 2));
+        console.error('Validation errors:', JSON.stringify(result.error.issues, null, 2));
       }
 
       expect(result.success).toBe(true);
@@ -80,15 +80,15 @@ describe("CourtListener API e2e", () => {
     });
   });
 
-  describe("Opinion Clusters", () => {
-    it("validates /clusters/ response", async ({ skip }) => {
+  describe('Opinion Clusters', () => {
+    it('validates /clusters/ response', async ({ skip }) => {
       if (!apiReachable) skip();
 
-      const data = await fetchAPI("/clusters/?page_size=5");
+      const data = await fetchAPI('/clusters/?page_size=5');
       const result = OpinionClustersResponseSchema.safeParse(data);
 
       if (!result.success) {
-        console.error("Validation errors:", JSON.stringify(result.error.issues, null, 2));
+        console.error('Validation errors:', JSON.stringify(result.error.issues, null, 2));
       }
 
       expect(result.success).toBe(true);
@@ -96,15 +96,15 @@ describe("CourtListener API e2e", () => {
     });
   });
 
-  describe("Opinions", () => {
-    it("validates /opinions/ response", async ({ skip }) => {
+  describe('Opinions', () => {
+    it('validates /opinions/ response', async ({ skip }) => {
       if (!apiReachable) skip();
 
-      const data = await fetchAPI("/opinions/?page_size=5");
+      const data = await fetchAPI('/opinions/?page_size=5');
       const result = OpinionsResponseSchema.safeParse(data);
 
       if (!result.success) {
-        console.error("Validation errors:", JSON.stringify(result.error.issues, null, 2));
+        console.error('Validation errors:', JSON.stringify(result.error.issues, null, 2));
       }
 
       expect(result.success).toBe(true);
@@ -112,15 +112,15 @@ describe("CourtListener API e2e", () => {
     });
   });
 
-  describe("Dockets", () => {
-    it("validates /dockets/ response", async ({ skip }) => {
+  describe('Dockets', () => {
+    it('validates /dockets/ response', async ({ skip }) => {
       if (!apiReachable) skip();
 
-      const data = await fetchAPI("/dockets/?page_size=5");
+      const data = await fetchAPI('/dockets/?page_size=5');
       const result = DocketsResponseSchema.safeParse(data);
 
       if (!result.success) {
-        console.error("Validation errors:", JSON.stringify(result.error.issues, null, 2));
+        console.error('Validation errors:', JSON.stringify(result.error.issues, null, 2));
       }
 
       expect(result.success).toBe(true);
@@ -128,15 +128,15 @@ describe("CourtListener API e2e", () => {
     });
   });
 
-  describe("Audio", () => {
-    it("validates /audio/ response", async ({ skip }) => {
+  describe('Audio', () => {
+    it('validates /audio/ response', async ({ skip }) => {
       if (!apiReachable) skip();
 
-      const data = await fetchAPI("/audio/?page_size=5");
+      const data = await fetchAPI('/audio/?page_size=5');
       const result = AudioResponseSchema.safeParse(data);
 
       if (!result.success) {
-        console.error("Validation errors:", JSON.stringify(result.error.issues, null, 2));
+        console.error('Validation errors:', JSON.stringify(result.error.issues, null, 2));
       }
 
       expect(result.success).toBe(true);
@@ -144,15 +144,15 @@ describe("CourtListener API e2e", () => {
     });
   });
 
-  describe("Search", () => {
-    it("validates /search/ response", async ({ skip }) => {
+  describe('Search', () => {
+    it('validates /search/ response', async ({ skip }) => {
       if (!apiReachable) skip();
 
-      const data = await fetchAPI("/search/?q=privacy&type=o&page_size=5");
+      const data = await fetchAPI('/search/?q=privacy&type=o&page_size=5');
       const result = SearchResponseSchema.safeParse(data);
 
       if (!result.success) {
-        console.error("Validation errors:", JSON.stringify(result.error.issues, null, 2));
+        console.error('Validation errors:', JSON.stringify(result.error.issues, null, 2));
       }
 
       expect(result.success).toBe(true);

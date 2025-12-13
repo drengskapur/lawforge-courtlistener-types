@@ -14,9 +14,7 @@
   "paths": {
     "/api/rest/v4/search/": {
       "get": {
-        "tags": [
-          "Search"
-        ],
+        "tags": ["Search"],
         "summary": "List /api/rest/v4/search/",
         "operationId": "list_api_rest_v4_search",
         "parameters": [
@@ -244,9 +242,7 @@
     },
     "/api/rest/v4/dockets/": {
       "get": {
-        "tags": [
-          "Dockets"
-        ],
+        "tags": ["Dockets"],
         "summary": "List /api/rest/v4/dockets/",
         "operationId": "list_api_rest_v4_dockets",
         "parameters": [
@@ -291,9 +287,7 @@
     },
     "/api/rest/v4/bankruptcy-information/": {
       "get": {
-        "tags": [
-          "Bankruptcy Information"
-        ],
+        "tags": ["Bankruptcy Information"],
         "summary": "List /api/rest/v4/bankruptcy-information/",
         "operationId": "list_api_rest_v4_bankruptcy_information",
         "parameters": [
@@ -338,9 +332,7 @@
     },
     "/api/rest/v4/originating-court-information/": {
       "get": {
-        "tags": [
-          "Originating Court Information"
-        ],
+        "tags": ["Originating Court Information"],
         "summary": "List /api/rest/v4/originating-court-information/",
         "operationId": "list_api_rest_v4_originating_court_information",
         "parameters": [
@@ -443,9 +435,7 @@
     },
     "/api/rest/v4/docket-entries/": {
       "get": {
-        "tags": [
-          "Docket Entries"
-        ],
+        "tags": ["Docket Entries"],
         "summary": "List /api/rest/v4/docket-entries/",
         "operationId": "list_api_rest_v4_docket_entries",
         "parameters": [
@@ -490,9 +480,7 @@
     },
     "/api/rest/v4/recap-documents/": {
       "get": {
-        "tags": [
-          "Recap Documents"
-        ],
+        "tags": ["Recap Documents"],
         "summary": "List /api/rest/v4/recap-documents/",
         "operationId": "list_api_rest_v4_recap_documents",
         "parameters": [
@@ -537,9 +525,7 @@
     },
     "/api/rest/v4/courts/": {
       "get": {
-        "tags": [
-          "Courts"
-        ],
+        "tags": ["Courts"],
         "summary": "List /api/rest/v4/courts/",
         "operationId": "list_api_rest_v4_courts",
         "parameters": [
@@ -655,9 +641,7 @@
     },
     "/api/rest/v4/audio/": {
       "get": {
-        "tags": [
-          "Audio"
-        ],
+        "tags": ["Audio"],
         "summary": "List /api/rest/v4/audio/",
         "operationId": "list_api_rest_v4_audio",
         "parameters": [
@@ -782,9 +766,7 @@
     },
     "/api/rest/v4/clusters/": {
       "get": {
-        "tags": [
-          "Clusters"
-        ],
+        "tags": ["Clusters"],
         "summary": "List /api/rest/v4/clusters/",
         "operationId": "list_api_rest_v4_clusters",
         "parameters": [
@@ -829,9 +811,7 @@
     },
     "/api/rest/v4/opinions/": {
       "get": {
-        "tags": [
-          "Opinions"
-        ],
+        "tags": ["Opinions"],
         "summary": "List /api/rest/v4/opinions/",
         "operationId": "list_api_rest_v4_opinions",
         "parameters": [
@@ -876,9 +856,7 @@
     },
     "/api/rest/v4/opinions-cited/": {
       "get": {
-        "tags": [
-          "Opinions Cited"
-        ],
+        "tags": ["Opinions Cited"],
         "summary": "List /api/rest/v4/opinions-cited/",
         "operationId": "list_api_rest_v4_opinions_cited",
         "parameters": [
@@ -940,9 +918,7 @@
     },
     "/api/rest/v4/tag/": {
       "get": {
-        "tags": [
-          "Tag"
-        ],
+        "tags": ["Tag"],
         "summary": "List /api/rest/v4/tag/",
         "operationId": "list_api_rest_v4_tag",
         "parameters": [
@@ -987,9 +963,7 @@
     },
     "/api/rest/v4/people/": {
       "get": {
-        "tags": [
-          "People"
-        ],
+        "tags": ["People"],
         "summary": "List /api/rest/v4/people/",
         "operationId": "list_api_rest_v4_people",
         "parameters": [
@@ -1149,9 +1123,7 @@
     },
     "/api/rest/v4/disclosure-typeahead/": {
       "get": {
-        "tags": [
-          "Disclosure Typeahead"
-        ],
+        "tags": ["Disclosure Typeahead"],
         "summary": "List /api/rest/v4/disclosure-typeahead/",
         "operationId": "list_api_rest_v4_disclosure_typeahead",
         "parameters": [
@@ -1214,9 +1186,7 @@
     },
     "/api/rest/v4/positions/": {
       "get": {
-        "tags": [
-          "Positions"
-        ],
+        "tags": ["Positions"],
         "summary": "List /api/rest/v4/positions/",
         "operationId": "list_api_rest_v4_positions",
         "parameters": [
@@ -1643,9 +1613,7 @@
     },
     "/api/rest/v4/retention-events/": {
       "get": {
-        "tags": [
-          "Retention Events"
-        ],
+        "tags": ["Retention Events"],
         "summary": "List /api/rest/v4/retention-events/",
         "operationId": "list_api_rest_v4_retention_events",
         "parameters": [
@@ -1707,9 +1675,7 @@
     },
     "/api/rest/v4/educations/": {
       "get": {
-        "tags": [
-          "Educations"
-        ],
+        "tags": ["Educations"],
         "summary": "List /api/rest/v4/educations/",
         "operationId": "list_api_rest_v4_educations",
         "parameters": [
@@ -1808,9 +1774,7 @@
     },
     "/api/rest/v4/schools/": {
       "get": {
-        "tags": [
-          "Schools"
-        ],
+        "tags": ["Schools"],
         "summary": "List /api/rest/v4/schools/",
         "operationId": "list_api_rest_v4_schools",
         "parameters": [
@@ -1880,9 +1844,7 @@
     },
     "/api/rest/v4/political-affiliations/": {
       "get": {
-        "tags": [
-          "Political Affiliations"
-        ],
+        "tags": ["Political Affiliations"],
         "summary": "List /api/rest/v4/political-affiliations/",
         "operationId": "list_api_rest_v4_political_affiliations",
         "parameters": [
@@ -1964,9 +1926,7 @@
     },
     "/api/rest/v4/sources/": {
       "get": {
-        "tags": [
-          "Sources"
-        ],
+        "tags": ["Sources"],
         "summary": "List /api/rest/v4/sources/",
         "operationId": "list_api_rest_v4_sources",
         "parameters": [
@@ -2037,9 +1997,7 @@
     },
     "/api/rest/v4/aba-ratings/": {
       "get": {
-        "tags": [
-          "Aba Ratings"
-        ],
+        "tags": ["Aba Ratings"],
         "summary": "List /api/rest/v4/aba-ratings/",
         "operationId": "list_api_rest_v4_aba_ratings",
         "parameters": [
@@ -2107,9 +2065,7 @@
     },
     "/api/rest/v4/parties/": {
       "get": {
-        "tags": [
-          "Parties"
-        ],
+        "tags": ["Parties"],
         "summary": "List /api/rest/v4/parties/",
         "operationId": "list_api_rest_v4_parties",
         "parameters": [
@@ -2154,9 +2110,7 @@
     },
     "/api/rest/v4/attorneys/": {
       "get": {
-        "tags": [
-          "Attorneys"
-        ],
+        "tags": ["Attorneys"],
         "summary": "List /api/rest/v4/attorneys/",
         "operationId": "list_api_rest_v4_attorneys",
         "parameters": [
@@ -2201,9 +2155,7 @@
     },
     "/api/rest/v4/recap/": {
       "get": {
-        "tags": [
-          "Recap"
-        ],
+        "tags": ["Recap"],
         "summary": "List /api/rest/v4/recap/",
         "operationId": "list_api_rest_v4_recap",
         "parameters": [
@@ -2248,9 +2200,7 @@
     },
     "/api/rest/v4/recap-email/": {
       "get": {
-        "tags": [
-          "Recap Email"
-        ],
+        "tags": ["Recap Email"],
         "summary": "List /api/rest/v4/recap-email/",
         "operationId": "list_api_rest_v4_recap_email",
         "parameters": [
@@ -2295,9 +2245,7 @@
     },
     "/api/rest/v4/recap-fetch/": {
       "get": {
-        "tags": [
-          "Recap Fetch"
-        ],
+        "tags": ["Recap Fetch"],
         "summary": "List /api/rest/v4/recap-fetch/",
         "operationId": "list_api_rest_v4_recap_fetch",
         "parameters": [
@@ -2407,9 +2355,7 @@
     },
     "/api/rest/v4/recap-query/": {
       "get": {
-        "tags": [
-          "Recap Query"
-        ],
+        "tags": ["Recap Query"],
         "summary": "List /api/rest/v4/recap-query/",
         "operationId": "list_api_rest_v4_recap_query",
         "parameters": [
@@ -2454,9 +2400,7 @@
     },
     "/api/rest/v4/fjc-integrated-database/": {
       "get": {
-        "tags": [
-          "Fjc Integrated Database"
-        ],
+        "tags": ["Fjc Integrated Database"],
         "summary": "List /api/rest/v4/fjc-integrated-database/",
         "operationId": "list_api_rest_v4_fjc_integrated_database",
         "parameters": [
@@ -2631,9 +2575,7 @@
     },
     "/api/rest/v4/tags/": {
       "get": {
-        "tags": [
-          "Tags"
-        ],
+        "tags": ["Tags"],
         "summary": "List /api/rest/v4/tags/",
         "operationId": "list_api_rest_v4_tags",
         "parameters": [
@@ -2710,9 +2652,7 @@
     },
     "/api/rest/v4/docket-tags/": {
       "get": {
-        "tags": [
-          "Docket Tags"
-        ],
+        "tags": ["Docket Tags"],
         "summary": "List /api/rest/v4/docket-tags/",
         "operationId": "list_api_rest_v4_docket_tags",
         "parameters": [
@@ -2757,9 +2697,7 @@
     },
     "/api/rest/v4/prayers/": {
       "get": {
-        "tags": [
-          "Prayers"
-        ],
+        "tags": ["Prayers"],
         "summary": "List /api/rest/v4/prayers/",
         "operationId": "list_api_rest_v4_prayers",
         "parameters": [
@@ -2804,9 +2742,7 @@
     },
     "/api/rest/v4/increment-event/": {
       "get": {
-        "tags": [
-          "Increment Event"
-        ],
+        "tags": ["Increment Event"],
         "summary": "List /api/rest/v4/increment-event/",
         "operationId": "list_api_rest_v4_increment_event",
         "parameters": [
@@ -2851,9 +2787,7 @@
     },
     "/api/rest/v4/visualizations/json/": {
       "get": {
-        "tags": [
-          "Visualizations"
-        ],
+        "tags": ["Visualizations"],
         "summary": "List /api/rest/v4/visualizations/json/",
         "operationId": "list_api_rest_v4_visualizations_json",
         "parameters": [
@@ -2898,9 +2832,7 @@
     },
     "/api/rest/v4/visualizations/": {
       "get": {
-        "tags": [
-          "Visualizations"
-        ],
+        "tags": ["Visualizations"],
         "summary": "List /api/rest/v4/visualizations/",
         "operationId": "list_api_rest_v4_visualizations",
         "parameters": [
@@ -2945,9 +2877,7 @@
     },
     "/api/rest/v4/agreements/": {
       "get": {
-        "tags": [
-          "Agreements"
-        ],
+        "tags": ["Agreements"],
         "summary": "List /api/rest/v4/agreements/",
         "operationId": "list_api_rest_v4_agreements",
         "parameters": [
@@ -3018,9 +2948,7 @@
     },
     "/api/rest/v4/debts/": {
       "get": {
-        "tags": [
-          "Debts"
-        ],
+        "tags": ["Debts"],
         "summary": "List /api/rest/v4/debts/",
         "operationId": "list_api_rest_v4_debts",
         "parameters": [
@@ -3094,9 +3022,7 @@
     },
     "/api/rest/v4/financial-disclosures/": {
       "get": {
-        "tags": [
-          "Financial Disclosures"
-        ],
+        "tags": ["Financial Disclosures"],
         "summary": "List /api/rest/v4/financial-disclosures/",
         "operationId": "list_api_rest_v4_financial_disclosures",
         "parameters": [
@@ -3223,9 +3149,7 @@
     },
     "/api/rest/v4/gifts/": {
       "get": {
-        "tags": [
-          "Gifts"
-        ],
+        "tags": ["Gifts"],
         "summary": "List /api/rest/v4/gifts/",
         "operationId": "list_api_rest_v4_gifts",
         "parameters": [
@@ -3299,9 +3223,7 @@
     },
     "/api/rest/v4/investments/": {
       "get": {
-        "tags": [
-          "Investments"
-        ],
+        "tags": ["Investments"],
         "summary": "List /api/rest/v4/investments/",
         "operationId": "list_api_rest_v4_investments",
         "parameters": [
@@ -3406,9 +3328,7 @@
     },
     "/api/rest/v4/non-investment-incomes/": {
       "get": {
-        "tags": [
-          "Non Investment Incomes"
-        ],
+        "tags": ["Non Investment Incomes"],
         "summary": "List /api/rest/v4/non-investment-incomes/",
         "operationId": "list_api_rest_v4_non_investment_incomes",
         "parameters": [
@@ -3482,9 +3402,7 @@
     },
     "/api/rest/v4/disclosure-positions/": {
       "get": {
-        "tags": [
-          "Disclosure Positions"
-        ],
+        "tags": ["Disclosure Positions"],
         "summary": "List /api/rest/v4/disclosure-positions/",
         "operationId": "list_api_rest_v4_disclosure_positions",
         "parameters": [
@@ -3555,9 +3473,7 @@
     },
     "/api/rest/v4/reimbursements/": {
       "get": {
-        "tags": [
-          "Reimbursements"
-        ],
+        "tags": ["Reimbursements"],
         "summary": "List /api/rest/v4/reimbursements/",
         "operationId": "list_api_rest_v4_reimbursements",
         "parameters": [
@@ -3637,9 +3553,7 @@
     },
     "/api/rest/v4/spouse-incomes/": {
       "get": {
-        "tags": [
-          "Spouse Incomes"
-        ],
+        "tags": ["Spouse Incomes"],
         "summary": "List /api/rest/v4/spouse-incomes/",
         "operationId": "list_api_rest_v4_spouse_incomes",
         "parameters": [
@@ -3710,9 +3624,7 @@
     },
     "/api/rest/v4/alerts/": {
       "get": {
-        "tags": [
-          "Alerts"
-        ],
+        "tags": ["Alerts"],
         "summary": "List /api/rest/v4/alerts/",
         "operationId": "list_api_rest_v4_alerts",
         "parameters": [
@@ -3757,9 +3669,7 @@
     },
     "/api/rest/v4/docket-alerts/": {
       "get": {
-        "tags": [
-          "Docket Alerts"
-        ],
+        "tags": ["Docket Alerts"],
         "summary": "List /api/rest/v4/docket-alerts/",
         "operationId": "list_api_rest_v4_docket_alerts",
         "parameters": [
@@ -3804,9 +3714,7 @@
     },
     "/api/rest/v4/memberships/": {
       "get": {
-        "tags": [
-          "Memberships"
-        ],
+        "tags": ["Memberships"],
         "summary": "List /api/rest/v4/memberships/",
         "operationId": "list_api_rest_v4_memberships",
         "parameters": [
@@ -3851,9 +3759,7 @@
     },
     "/api/rest/v4/citation-lookup/": {
       "get": {
-        "tags": [
-          "Citation Lookup"
-        ],
+        "tags": ["Citation Lookup"],
         "summary": "List /api/rest/v4/citation-lookup/",
         "operationId": "list_api_rest_v4_citation_lookup",
         "parameters": [

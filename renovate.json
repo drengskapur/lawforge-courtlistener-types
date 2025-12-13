@@ -19,20 +19,12 @@
     {
       "description": "Group all TypeScript-related packages together",
       "groupName": "typescript",
-      "matchPackagePatterns": [
-        "^@types/",
-        "^typescript$",
-        "^tsx$"
-      ]
+      "matchPackagePatterns": ["^@types/", "^typescript$", "^tsx$"]
     },
     {
       "description": "Group all linting/formatting tools",
       "groupName": "linting",
-      "matchPackagePatterns": [
-        "^@biomejs/",
-        "^eslint",
-        "^prettier"
-      ]
+      "matchPackagePatterns": ["^@biomejs/", "^eslint", "^prettier"]
     },
     {
       "description": "Auto-merge patch updates for dev dependencies",
