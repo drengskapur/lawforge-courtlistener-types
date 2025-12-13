@@ -1,20 +1,25 @@
-# Installation
-> `npm install --save @types/lawforge__courtlistener`
+# lawforge-courtlistener-types
 
-# Summary
-This package contains type definitions for [CourtListener API](https://www.courtlistener.com/api/) (https://www.courtlistener.com/api/).
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![npm version](https://img.shields.io/npm/v/lawforge-courtlistener-types.svg?style=flat-square)](https://www.npmjs.com/package/lawforge-courtlistener-types)
 
-# Details
-Files were exported from https://github.com/drengskapur/lawforge
+TypeScript definitions for the [CourtListener API](https://www.courtlistener.com/api/).
 
-### Additional Details
-- Dependencies: none
-- Optional dependencies: none
+## Table of Contents
 
-# Credits
-These definitions were written by [LawForge](https://github.com/drengskapur/lawforge).
+- [Install](#install)
+- [Usage](#usage)
+- [API](#api)
+- [Contributing](#contributing)
+- [License](#license)
 
-# Usage
+## Install
+
+```bash
+npm install lawforge-courtlistener-types
+```
+
+## Usage
 
 ```typescript
 import type {
@@ -23,9 +28,8 @@ import type {
   Person,
   CourtsResponse,
   ApiCourt
-} from "@types/lawforge__courtlistener";
+} from "lawforge-courtlistener-types";
 
-// Use with CourtListener API responses
 const court: Court = {
   id: "us",
   name: "Supreme Court of the United States",
@@ -33,11 +37,10 @@ const court: Court = {
   abbreviation: "SCOTUS"
 };
 
-// Use with API response types
 const response: CourtsResponse = await fetchCourts();
 ```
 
-# API Coverage
+## API
 
 This package provides TypeScript types for:
 
@@ -48,21 +51,14 @@ This package provides TypeScript types for:
 - **Citations** - Legal citation networks
 - **Search Results** - Search API responses
 
-# Development
+## Contributing
 
-This package includes development tools for maintaining type accuracy:
+PRs accepted.
 
-```bash
-# Generate fresh OpenAPI spec from CourtListener API
-npm run generate-openapi
-```
+For issues with these type definitions, please [open an issue](https://github.com/drengskapur/lawforge-courtlistener-types/issues).
 
-The generated OpenAPI specification in `tools/openapi/` (e.g., `courtlistener-v4.3.0.openapi.json`) is used to ensure type definitions match the actual API responses.
+For issues with the CourtListener API itself, see the [CourtListener API documentation](https://www.courtlistener.com/api/).
 
-# Contributing
+## License
 
-This is a type definition package for the CourtListener API. The types are maintained to match the official CourtListener API.
-
-For issues with the CourtListener API itself, please see the [CourtListener API documentation](https://www.courtlistener.com/api/).
-
-For issues with these type definitions, please report them in the [LawForge repository](https://github.com/drengskapur/lawforge).
+[MIT](LICENSE) © LawForge

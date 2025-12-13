@@ -1,5 +1,5 @@
 {
-  "name": "@types/lawforge__courtlistener",
+  "name": "lawforge-courtlistener-types",
   "version": "4.3.0",
   "description": "TypeScript definitions for CourtListener API",
   "types": "index.d.ts",
@@ -23,13 +23,17 @@
   ],
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "typescript": "^5.9.3",
+    "node-fetch": "^3.3.2",
     "tsx": "^4.21.0",
-    "node-fetch": "^3.3.2"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15",
+    "zod": "^4.1.13"
   },
   "scripts": {
     "build": "tsc",
     "test": "tsc --noEmit",
+    "test:e2e": "vitest run --testTimeout=30000",
+    "test:e2e:watch": "vitest --testTimeout=30000",
     "lint": "biome lint .",
     "format": "biome format --write .",
     "generate-openapi": "tsx tools/scripts/generate-openapi.ts",
