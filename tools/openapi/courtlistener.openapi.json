@@ -1,0 +1,3900 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "CourtListener REST API",
+    "version": "v4",
+    "description": "Auto-generated spec from live endpoints (list endpoints only)."
+  },
+  "servers": [
+    {
+      "url": "https://www.courtlistener.com/api/rest/v4/",
+      "description": "CourtListener"
+    }
+  ],
+  "paths": {
+    "/api/rest/v4/search/": {
+      "get": {
+        "tags": [
+          "Search"
+        ],
+        "summary": "List /api/rest/v4/search/",
+        "operationId": "list_api_rest_v4_search",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "absolute_url": {
+                      "type": "string"
+                    },
+                    "attorney": {
+                      "type": "string"
+                    },
+                    "caseName": {
+                      "type": "string"
+                    },
+                    "caseNameFull": {
+                      "type": "string"
+                    },
+                    "citation": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "citeCount": {
+                      "type": "integer"
+                    },
+                    "cluster_id": {
+                      "type": "integer"
+                    },
+                    "court": {
+                      "type": "string"
+                    },
+                    "court_citation_string": {
+                      "type": "string"
+                    },
+                    "court_id": {
+                      "type": "string"
+                    },
+                    "court_jurisdiction": {
+                      "type": "string"
+                    },
+                    "dateArgued": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "dateFiled": {
+                      "type": "string"
+                    },
+                    "dateReargued": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "dateReargumentDenied": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "docketNumber": {
+                      "type": "string"
+                    },
+                    "docket_id": {
+                      "type": "integer"
+                    },
+                    "judge": {
+                      "type": "string"
+                    },
+                    "lexisCite": {
+                      "type": "string"
+                    },
+                    "meta": {
+                      "type": "object",
+                      "properties": {
+                        "timestamp": {
+                          "type": "string"
+                        },
+                        "date_created": {
+                          "type": "string"
+                        },
+                        "score": {
+                          "type": "object",
+                          "properties": {
+                            "bm25": {
+                              "type": "number",
+                              "format": "float"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "neutralCite": {
+                      "type": "string"
+                    },
+                    "non_participating_judge_ids": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "opinions": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "author_id": {
+                            "type": "string",
+                            "nullable": true
+                          },
+                          "cites": {
+                            "type": "array",
+                            "items": {
+                              "type": "integer"
+                            }
+                          },
+                          "download_url": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "type": "integer"
+                          },
+                          "joined_by_ids": {
+                            "type": "array",
+                            "items": {}
+                          },
+                          "local_path": {
+                            "type": "string"
+                          },
+                          "meta": {
+                            "type": "object",
+                            "properties": {
+                              "timestamp": {
+                                "type": "string"
+                              },
+                              "date_created": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "ordering_key": {
+                            "type": "string",
+                            "nullable": true
+                          },
+                          "per_curiam": {
+                            "type": "boolean"
+                          },
+                          "sha1": {
+                            "type": "string"
+                          },
+                          "snippet": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "panel_ids": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "panel_names": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "posture": {
+                      "type": "string"
+                    },
+                    "procedural_history": {
+                      "type": "string"
+                    },
+                    "scdb_id": {
+                      "type": "string"
+                    },
+                    "sibling_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      }
+                    },
+                    "source": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "suitNature": {
+                      "type": "string"
+                    },
+                    "syllabus": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/dockets/": {
+      "get": {
+        "tags": [
+          "Dockets"
+        ],
+        "summary": "List /api/rest/v4/dockets/",
+        "operationId": "list_api_rest_v4_dockets",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/bankruptcy-information/": {
+      "get": {
+        "tags": [
+          "Bankruptcy Information"
+        ],
+        "summary": "List /api/rest/v4/bankruptcy-information/",
+        "operationId": "list_api_rest_v4_bankruptcy_information",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/originating-court-information/": {
+      "get": {
+        "tags": [
+          "Originating Court Information"
+        ],
+        "summary": "List /api/rest/v4/originating-court-information/",
+        "operationId": "list_api_rest_v4_originating_court_information",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "docket_number": {
+                      "type": "string"
+                    },
+                    "assigned_to_str": {
+                      "type": "string"
+                    },
+                    "ordering_judge_str": {
+                      "type": "string"
+                    },
+                    "court_reporter": {
+                      "type": "string"
+                    },
+                    "date_disposed": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_filed": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_judgment": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_judgment_eod": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_filed_noa": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_received_coa": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "assigned_to": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "ordering_judge": {
+                      "type": "string",
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/docket-entries/": {
+      "get": {
+        "tags": [
+          "Docket Entries"
+        ],
+        "summary": "List /api/rest/v4/docket-entries/",
+        "operationId": "list_api_rest_v4_docket_entries",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/recap-documents/": {
+      "get": {
+        "tags": [
+          "Recap Documents"
+        ],
+        "summary": "List /api/rest/v4/recap-documents/",
+        "operationId": "list_api_rest_v4_recap_documents",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/courts/": {
+      "get": {
+        "tags": [
+          "Courts"
+        ],
+        "summary": "List /api/rest/v4/courts/",
+        "operationId": "list_api_rest_v4_courts",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "pacer_court_id": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "pacer_has_rss_feed": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "pacer_rss_entry_types": {
+                      "type": "string"
+                    },
+                    "date_last_pacer_contact": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "fjc_court_id": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "in_use": {
+                      "type": "boolean"
+                    },
+                    "has_opinion_scraper": {
+                      "type": "boolean"
+                    },
+                    "has_oral_argument_scraper": {
+                      "type": "boolean"
+                    },
+                    "position": {
+                      "type": "integer"
+                    },
+                    "citation_string": {
+                      "type": "string"
+                    },
+                    "short_name": {
+                      "type": "string"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "start_date": {
+                      "type": "string"
+                    },
+                    "end_date": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "jurisdiction": {
+                      "type": "string"
+                    },
+                    "parent_court": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "appeals_to": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/audio/": {
+      "get": {
+        "tags": [
+          "Audio"
+        ],
+        "summary": "List /api/rest/v4/audio/",
+        "operationId": "list_api_rest_v4_audio",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "absolute_url": {
+                      "type": "string"
+                    },
+                    "panel": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "docket": {
+                      "type": "string"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "source": {
+                      "type": "string"
+                    },
+                    "case_name_short": {
+                      "type": "string"
+                    },
+                    "case_name": {
+                      "type": "string"
+                    },
+                    "case_name_full": {
+                      "type": "string"
+                    },
+                    "judges": {
+                      "type": "string"
+                    },
+                    "sha1": {
+                      "type": "string"
+                    },
+                    "download_url": {
+                      "type": "string"
+                    },
+                    "local_path_mp3": {
+                      "type": "string"
+                    },
+                    "local_path_original_file": {
+                      "type": "string"
+                    },
+                    "filepath_ia": {
+                      "type": "string"
+                    },
+                    "ia_upload_failure_count": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "duration": {
+                      "type": "integer"
+                    },
+                    "processing_complete": {
+                      "type": "boolean"
+                    },
+                    "date_blocked": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "blocked": {
+                      "type": "boolean"
+                    },
+                    "stt_status": {
+                      "type": "integer"
+                    },
+                    "stt_source": {
+                      "type": "integer"
+                    },
+                    "stt_transcript": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/clusters/": {
+      "get": {
+        "tags": [
+          "Clusters"
+        ],
+        "summary": "List /api/rest/v4/clusters/",
+        "operationId": "list_api_rest_v4_clusters",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/opinions/": {
+      "get": {
+        "tags": [
+          "Opinions"
+        ],
+        "summary": "List /api/rest/v4/opinions/",
+        "operationId": "list_api_rest_v4_opinions",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/opinions-cited/": {
+      "get": {
+        "tags": [
+          "Opinions Cited"
+        ],
+        "summary": "List /api/rest/v4/opinions-cited/",
+        "operationId": "list_api_rest_v4_opinions_cited",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "citing_opinion": {
+                      "type": "string"
+                    },
+                    "cited_opinion": {
+                      "type": "string"
+                    },
+                    "depth": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/tag/": {
+      "get": {
+        "tags": [
+          "Tag"
+        ],
+        "summary": "List /api/rest/v4/tag/",
+        "operationId": "list_api_rest_v4_tag",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/people/": {
+      "get": {
+        "tags": [
+          "People"
+        ],
+        "summary": "List /api/rest/v4/people/",
+        "operationId": "list_api_rest_v4_people",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "race": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "sources": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "aba_ratings": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "educations": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "positions": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "political_affiliations": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "is_alias_of": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "date_completed": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "fjc_id": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "slug": {
+                      "type": "string"
+                    },
+                    "name_first": {
+                      "type": "string"
+                    },
+                    "name_middle": {
+                      "type": "string"
+                    },
+                    "name_last": {
+                      "type": "string"
+                    },
+                    "name_suffix": {
+                      "type": "string"
+                    },
+                    "date_dob": {
+                      "type": "string"
+                    },
+                    "date_granularity_dob": {
+                      "type": "string"
+                    },
+                    "date_dod": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_granularity_dod": {
+                      "type": "string"
+                    },
+                    "dob_city": {
+                      "type": "string"
+                    },
+                    "dob_state": {
+                      "type": "string"
+                    },
+                    "dob_country": {
+                      "type": "string"
+                    },
+                    "dod_city": {
+                      "type": "string"
+                    },
+                    "dod_state": {
+                      "type": "string"
+                    },
+                    "dod_country": {
+                      "type": "string"
+                    },
+                    "gender": {
+                      "type": "string"
+                    },
+                    "religion": {
+                      "type": "string"
+                    },
+                    "ftm_total_received": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "ftm_eid": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "has_photo": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/disclosure-typeahead/": {
+      "get": {
+        "tags": [
+          "Disclosure Typeahead"
+        ],
+        "summary": "List /api/rest/v4/disclosure-typeahead/",
+        "operationId": "list_api_rest_v4_disclosure_typeahead",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "position_str": {
+                      "type": "string"
+                    },
+                    "name_full": {
+                      "type": "string"
+                    },
+                    "disclosure_years": {
+                      "type": "string"
+                    },
+                    "thumbnail_path": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "newest_disclosure_url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/positions/": {
+      "get": {
+        "tags": [
+          "Positions"
+        ],
+        "summary": "List /api/rest/v4/positions/",
+        "operationId": "list_api_rest_v4_positions",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "retention_events": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "person": {
+                      "type": "object",
+                      "properties": {
+                        "resource_uri": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "integer"
+                        },
+                        "race": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "sources": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "resource_uri": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "integer"
+                              },
+                              "person": {
+                                "type": "string"
+                              },
+                              "date_created": {
+                                "type": "string"
+                              },
+                              "date_modified": {
+                                "type": "string"
+                              },
+                              "url": {
+                                "type": "string"
+                              },
+                              "date_accessed": {
+                                "type": "string"
+                              },
+                              "notes": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "aba_ratings": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "educations": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "resource_uri": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "integer"
+                              },
+                              "school": {
+                                "type": "object",
+                                "properties": {
+                                  "resource_uri": {
+                                    "type": "string"
+                                  },
+                                  "id": {
+                                    "type": "integer"
+                                  },
+                                  "is_alias_of": {
+                                    "type": "string",
+                                    "nullable": true
+                                  },
+                                  "date_created": {
+                                    "type": "string"
+                                  },
+                                  "date_modified": {
+                                    "type": "string"
+                                  },
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "ein": {
+                                    "type": "integer"
+                                  }
+                                }
+                              },
+                              "person": {
+                                "type": "string"
+                              },
+                              "date_created": {
+                                "type": "string"
+                              },
+                              "date_modified": {
+                                "type": "string"
+                              },
+                              "degree_level": {
+                                "type": "string"
+                              },
+                              "degree_detail": {
+                                "type": "string"
+                              },
+                              "degree_year": {
+                                "type": "integer"
+                              }
+                            }
+                          }
+                        },
+                        "positions": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "political_affiliations": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "resource_uri": {
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "integer"
+                              },
+                              "person": {
+                                "type": "string"
+                              },
+                              "date_created": {
+                                "type": "string"
+                              },
+                              "date_modified": {
+                                "type": "string"
+                              },
+                              "political_party": {
+                                "type": "string"
+                              },
+                              "source": {
+                                "type": "string"
+                              },
+                              "date_start": {
+                                "type": "string"
+                              },
+                              "date_granularity_start": {
+                                "type": "string"
+                              },
+                              "date_end": {
+                                "type": "string",
+                                "nullable": true
+                              },
+                              "date_granularity_end": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "is_alias_of": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "date_created": {
+                          "type": "string"
+                        },
+                        "date_modified": {
+                          "type": "string"
+                        },
+                        "date_completed": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "fjc_id": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "slug": {
+                          "type": "string"
+                        },
+                        "name_first": {
+                          "type": "string"
+                        },
+                        "name_middle": {
+                          "type": "string"
+                        },
+                        "name_last": {
+                          "type": "string"
+                        },
+                        "name_suffix": {
+                          "type": "string"
+                        },
+                        "date_dob": {
+                          "type": "string"
+                        },
+                        "date_granularity_dob": {
+                          "type": "string"
+                        },
+                        "date_dod": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "date_granularity_dod": {
+                          "type": "string"
+                        },
+                        "dob_city": {
+                          "type": "string"
+                        },
+                        "dob_state": {
+                          "type": "string"
+                        },
+                        "dob_country": {
+                          "type": "string"
+                        },
+                        "dod_city": {
+                          "type": "string"
+                        },
+                        "dod_state": {
+                          "type": "string"
+                        },
+                        "dod_country": {
+                          "type": "string"
+                        },
+                        "gender": {
+                          "type": "string"
+                        },
+                        "religion": {
+                          "type": "string"
+                        },
+                        "ftm_total_received": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "ftm_eid": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "has_photo": {
+                          "type": "boolean"
+                        }
+                      }
+                    },
+                    "supervisor": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "predecessor": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "school": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "court": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "appointer": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "position_type": {
+                      "type": "string"
+                    },
+                    "job_title": {
+                      "type": "string"
+                    },
+                    "sector": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "organization_name": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "location_city": {
+                      "type": "string"
+                    },
+                    "location_state": {
+                      "type": "string"
+                    },
+                    "date_nominated": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_elected": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_recess_appointment": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_referred_to_judicial_committee": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_judicial_committee_action": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "judicial_committee_action": {
+                      "type": "string"
+                    },
+                    "date_hearing": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_confirmation": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_start": {
+                      "type": "string"
+                    },
+                    "date_granularity_start": {
+                      "type": "string"
+                    },
+                    "date_termination": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "termination_reason": {
+                      "type": "string"
+                    },
+                    "date_granularity_termination": {
+                      "type": "string"
+                    },
+                    "date_retirement": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "nomination_process": {
+                      "type": "string"
+                    },
+                    "vote_type": {
+                      "type": "string"
+                    },
+                    "voice_vote": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "votes_yes": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "votes_no": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "votes_yes_percent": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "votes_no_percent": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "how_selected": {
+                      "type": "string"
+                    },
+                    "has_inferred_values": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/retention-events/": {
+      "get": {
+        "tags": [
+          "Retention Events"
+        ],
+        "summary": "List /api/rest/v4/retention-events/",
+        "operationId": "list_api_rest_v4_retention_events",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "string"
+                    },
+                    "next": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "previous": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "results": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/educations/": {
+      "get": {
+        "tags": [
+          "Educations"
+        ],
+        "summary": "List /api/rest/v4/educations/",
+        "operationId": "list_api_rest_v4_educations",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "school": {
+                      "type": "object",
+                      "properties": {
+                        "resource_uri": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "integer"
+                        },
+                        "is_alias_of": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "date_created": {
+                          "type": "string"
+                        },
+                        "date_modified": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "ein": {
+                          "type": "integer"
+                        }
+                      }
+                    },
+                    "person": {
+                      "type": "string"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "degree_level": {
+                      "type": "string"
+                    },
+                    "degree_detail": {
+                      "type": "string"
+                    },
+                    "degree_year": {
+                      "type": "string",
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/schools/": {
+      "get": {
+        "tags": [
+          "Schools"
+        ],
+        "summary": "List /api/rest/v4/schools/",
+        "operationId": "list_api_rest_v4_schools",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "is_alias_of": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "ein": {
+                      "type": "string",
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/political-affiliations/": {
+      "get": {
+        "tags": [
+          "Political Affiliations"
+        ],
+        "summary": "List /api/rest/v4/political-affiliations/",
+        "operationId": "list_api_rest_v4_political_affiliations",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "person": {
+                      "type": "string"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "political_party": {
+                      "type": "string"
+                    },
+                    "source": {
+                      "type": "string"
+                    },
+                    "date_start": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_granularity_start": {
+                      "type": "string"
+                    },
+                    "date_end": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_granularity_end": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/sources/": {
+      "get": {
+        "tags": [
+          "Sources"
+        ],
+        "summary": "List /api/rest/v4/sources/",
+        "operationId": "list_api_rest_v4_sources",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "person": {
+                      "type": "string"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "date_accessed": {
+                      "type": "string"
+                    },
+                    "notes": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/aba-ratings/": {
+      "get": {
+        "tags": [
+          "Aba Ratings"
+        ],
+        "summary": "List /api/rest/v4/aba-ratings/",
+        "operationId": "list_api_rest_v4_aba_ratings",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "person": {
+                      "type": "string"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "year_rated": {
+                      "type": "integer"
+                    },
+                    "rating": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/parties/": {
+      "get": {
+        "tags": [
+          "Parties"
+        ],
+        "summary": "List /api/rest/v4/parties/",
+        "operationId": "list_api_rest_v4_parties",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/attorneys/": {
+      "get": {
+        "tags": [
+          "Attorneys"
+        ],
+        "summary": "List /api/rest/v4/attorneys/",
+        "operationId": "list_api_rest_v4_attorneys",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/recap/": {
+      "get": {
+        "tags": [
+          "Recap"
+        ],
+        "summary": "List /api/rest/v4/recap/",
+        "operationId": "list_api_rest_v4_recap",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/recap-email/": {
+      "get": {
+        "tags": [
+          "Recap Email"
+        ],
+        "summary": "List /api/rest/v4/recap-email/",
+        "operationId": "list_api_rest_v4_recap_email",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/recap-fetch/": {
+      "get": {
+        "tags": [
+          "Recap Fetch"
+        ],
+        "summary": "List /api/rest/v4/recap-fetch/",
+        "operationId": "list_api_rest_v4_recap_fetch",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "court": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "docket": {
+                      "type": "integer"
+                    },
+                    "recap_document": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "date_completed": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "request_type": {
+                      "type": "integer"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "pacer_case_id": {
+                      "type": "string"
+                    },
+                    "docket_number": {
+                      "type": "string"
+                    },
+                    "de_date_start": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "de_date_end": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "de_number_start": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "de_number_end": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "show_parties_and_counsel": {
+                      "type": "boolean"
+                    },
+                    "show_terminated_parties": {
+                      "type": "boolean"
+                    },
+                    "show_list_of_member_cases": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/recap-query/": {
+      "get": {
+        "tags": [
+          "Recap Query"
+        ],
+        "summary": "List /api/rest/v4/recap-query/",
+        "operationId": "list_api_rest_v4_recap_query",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/fjc-integrated-database/": {
+      "get": {
+        "tags": [
+          "Fjc Integrated Database"
+        ],
+        "summary": "List /api/rest/v4/fjc-integrated-database/",
+        "operationId": "list_api_rest_v4_fjc_integrated_database",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "dataset_source": {
+                      "type": "integer"
+                    },
+                    "office": {
+                      "type": "string"
+                    },
+                    "docket_number": {
+                      "type": "string"
+                    },
+                    "origin": {
+                      "type": "integer"
+                    },
+                    "date_filed": {
+                      "type": "string"
+                    },
+                    "jurisdiction": {
+                      "type": "integer"
+                    },
+                    "nature_of_suit": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "section": {
+                      "type": "string"
+                    },
+                    "subsection": {
+                      "type": "string"
+                    },
+                    "diversity_of_residence": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "class_action": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "monetary_demand": {
+                      "type": "integer"
+                    },
+                    "county_of_residence": {
+                      "type": "integer"
+                    },
+                    "arbitration_at_filing": {
+                      "type": "string"
+                    },
+                    "arbitration_at_termination": {
+                      "type": "string"
+                    },
+                    "multidistrict_litigation_docket_number": {
+                      "type": "string"
+                    },
+                    "plaintiff": {
+                      "type": "string"
+                    },
+                    "defendant": {
+                      "type": "string"
+                    },
+                    "date_transfer": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "transfer_office": {
+                      "type": "string"
+                    },
+                    "transfer_docket_number": {
+                      "type": "string"
+                    },
+                    "transfer_origin": {
+                      "type": "string"
+                    },
+                    "date_terminated": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "termination_class_action_status": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "procedural_progress": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "disposition": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "nature_of_judgement": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "amount_received": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "judgment": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "pro_se": {
+                      "type": "integer"
+                    },
+                    "year_of_tape": {
+                      "type": "integer"
+                    },
+                    "nature_of_offense": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "circuit": {
+                      "type": "string"
+                    },
+                    "district": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/tags/": {
+      "get": {
+        "tags": [
+          "Tags"
+        ],
+        "summary": "List /api/rest/v4/tags/",
+        "operationId": "list_api_rest_v4_tags",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "view_count": {
+                      "type": "integer"
+                    },
+                    "published": {
+                      "type": "boolean"
+                    },
+                    "dockets": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/docket-tags/": {
+      "get": {
+        "tags": [
+          "Docket Tags"
+        ],
+        "summary": "List /api/rest/v4/docket-tags/",
+        "operationId": "list_api_rest_v4_docket_tags",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/prayers/": {
+      "get": {
+        "tags": [
+          "Prayers"
+        ],
+        "summary": "List /api/rest/v4/prayers/",
+        "operationId": "list_api_rest_v4_prayers",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/increment-event/": {
+      "get": {
+        "tags": [
+          "Increment Event"
+        ],
+        "summary": "List /api/rest/v4/increment-event/",
+        "operationId": "list_api_rest_v4_increment_event",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/visualizations/json/": {
+      "get": {
+        "tags": [
+          "Visualizations"
+        ],
+        "summary": "List /api/rest/v4/visualizations/json/",
+        "operationId": "list_api_rest_v4_visualizations_json",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/visualizations/": {
+      "get": {
+        "tags": [
+          "Visualizations"
+        ],
+        "summary": "List /api/rest/v4/visualizations/",
+        "operationId": "list_api_rest_v4_visualizations",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/agreements/": {
+      "get": {
+        "tags": [
+          "Agreements"
+        ],
+        "summary": "List /api/rest/v4/agreements/",
+        "operationId": "list_api_rest_v4_agreements",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "date_raw": {
+                      "type": "string"
+                    },
+                    "parties_and_terms": {
+                      "type": "string"
+                    },
+                    "redacted": {
+                      "type": "boolean"
+                    },
+                    "financial_disclosure": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/debts/": {
+      "get": {
+        "tags": [
+          "Debts"
+        ],
+        "summary": "List /api/rest/v4/debts/",
+        "operationId": "list_api_rest_v4_debts",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "creditor_name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "value_code": {
+                      "type": "string"
+                    },
+                    "redacted": {
+                      "type": "boolean"
+                    },
+                    "financial_disclosure": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/financial-disclosures/": {
+      "get": {
+        "tags": [
+          "Financial Disclosures"
+        ],
+        "summary": "List /api/rest/v4/financial-disclosures/",
+        "operationId": "list_api_rest_v4_financial_disclosures",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "agreements": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "debts": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "gifts": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "investments": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "non_investment_incomes": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "positions": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "reimbursements": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "spouse_incomes": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "person": {
+                      "type": "string"
+                    },
+                    "filepath": {
+                      "type": "string"
+                    },
+                    "thumbnail": {
+                      "type": "string"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "integer"
+                    },
+                    "thumbnail_status": {
+                      "type": "integer"
+                    },
+                    "page_count": {
+                      "type": "integer"
+                    },
+                    "sha1": {
+                      "type": "string"
+                    },
+                    "report_type": {
+                      "type": "integer"
+                    },
+                    "is_amended": {
+                      "type": "boolean"
+                    },
+                    "addendum_content_raw": {
+                      "type": "string"
+                    },
+                    "addendum_redacted": {
+                      "type": "boolean"
+                    },
+                    "has_been_extracted": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/gifts/": {
+      "get": {
+        "tags": [
+          "Gifts"
+        ],
+        "summary": "List /api/rest/v4/gifts/",
+        "operationId": "list_api_rest_v4_gifts",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "source": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    },
+                    "redacted": {
+                      "type": "boolean"
+                    },
+                    "financial_disclosure": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/investments/": {
+      "get": {
+        "tags": [
+          "Investments"
+        ],
+        "summary": "List /api/rest/v4/investments/",
+        "operationId": "list_api_rest_v4_investments",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "page_number": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "redacted": {
+                      "type": "boolean"
+                    },
+                    "income_during_reporting_period_code": {
+                      "type": "string"
+                    },
+                    "income_during_reporting_period_type": {
+                      "type": "string"
+                    },
+                    "gross_value_code": {
+                      "type": "string"
+                    },
+                    "gross_value_method": {
+                      "type": "string"
+                    },
+                    "transaction_during_reporting_period": {
+                      "type": "string"
+                    },
+                    "transaction_date_raw": {
+                      "type": "string"
+                    },
+                    "transaction_date": {
+                      "type": "string",
+                      "nullable": true
+                    },
+                    "transaction_value_code": {
+                      "type": "string"
+                    },
+                    "transaction_gain_code": {
+                      "type": "string"
+                    },
+                    "transaction_partner": {
+                      "type": "string"
+                    },
+                    "has_inferred_values": {
+                      "type": "boolean"
+                    },
+                    "financial_disclosure": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/non-investment-incomes/": {
+      "get": {
+        "tags": [
+          "Non Investment Incomes"
+        ],
+        "summary": "List /api/rest/v4/non-investment-incomes/",
+        "operationId": "list_api_rest_v4_non_investment_incomes",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "date_raw": {
+                      "type": "string"
+                    },
+                    "source_type": {
+                      "type": "string"
+                    },
+                    "income_amount": {
+                      "type": "string"
+                    },
+                    "redacted": {
+                      "type": "boolean"
+                    },
+                    "financial_disclosure": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/disclosure-positions/": {
+      "get": {
+        "tags": [
+          "Disclosure Positions"
+        ],
+        "summary": "List /api/rest/v4/disclosure-positions/",
+        "operationId": "list_api_rest_v4_disclosure_positions",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "position": {
+                      "type": "string"
+                    },
+                    "organization_name": {
+                      "type": "string"
+                    },
+                    "redacted": {
+                      "type": "boolean"
+                    },
+                    "financial_disclosure": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/reimbursements/": {
+      "get": {
+        "tags": [
+          "Reimbursements"
+        ],
+        "summary": "List /api/rest/v4/reimbursements/",
+        "operationId": "list_api_rest_v4_reimbursements",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "source": {
+                      "type": "string"
+                    },
+                    "date_raw": {
+                      "type": "string"
+                    },
+                    "location": {
+                      "type": "string"
+                    },
+                    "purpose": {
+                      "type": "string"
+                    },
+                    "items_paid_or_provided": {
+                      "type": "string"
+                    },
+                    "redacted": {
+                      "type": "boolean"
+                    },
+                    "financial_disclosure": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/spouse-incomes/": {
+      "get": {
+        "tags": [
+          "Spouse Incomes"
+        ],
+        "summary": "List /api/rest/v4/spouse-incomes/",
+        "operationId": "list_api_rest_v4_spouse_incomes",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "resource_uri": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer"
+                    },
+                    "date_created": {
+                      "type": "string"
+                    },
+                    "date_modified": {
+                      "type": "string"
+                    },
+                    "source_type": {
+                      "type": "string"
+                    },
+                    "date_raw": {
+                      "type": "string"
+                    },
+                    "redacted": {
+                      "type": "boolean"
+                    },
+                    "financial_disclosure": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/alerts/": {
+      "get": {
+        "tags": [
+          "Alerts"
+        ],
+        "summary": "List /api/rest/v4/alerts/",
+        "operationId": "list_api_rest_v4_alerts",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/docket-alerts/": {
+      "get": {
+        "tags": [
+          "Docket Alerts"
+        ],
+        "summary": "List /api/rest/v4/docket-alerts/",
+        "operationId": "list_api_rest_v4_docket_alerts",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/memberships/": {
+      "get": {
+        "tags": [
+          "Memberships"
+        ],
+        "summary": "List /api/rest/v4/memberships/",
+        "operationId": "list_api_rest_v4_memberships",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/rest/v4/citation-lookup/": {
+      "get": {
+        "tags": [
+          "Citation Lookup"
+        ],
+        "summary": "List /api/rest/v4/citation-lookup/",
+        "operationId": "list_api_rest_v4_citation_lookup",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "schema": {
+              "type": "integer"
+            },
+            "required": false
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@types/lawforge__courtlistener",
+  "version": "4.3.0",
+  "description": "TypeScript definitions for CourtListener API",
+  "types": "index.d.ts",
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "tsx": "^4.21.0",
+    "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc --noEmit",
+    "generate-openapi": "tsx tools/scripts/generate-openapi.ts"
+  },
+  "author": "LawForge",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drengskapur/lawforge",
+    "directory": "packages/lawforge__courtlistener"
+  },
+  "bugs": {
+    "url": "https://github.com/drengskapur/lawforge/issues"
+  },
+  "homepage": "https://github.com/drengskapur/lawforge#readme"
+}
