@@ -1,5 +1,8 @@
 # Installation
-> `npm install --save @types/lawforge__courtlistener`
+
+```bash
+npm install --save lawforge-courtlistener-types
+```
 
 # Summary
 This package contains type definitions for [CourtListener API](https://www.courtlistener.com/api/) (https://www.courtlistener.com/api/).
@@ -23,7 +26,7 @@ import type {
   Person,
   CourtsResponse,
   ApiCourt
-} from "@types/lawforge__courtlistener";
+} from "lawforge-courtlistener-types";
 
 // Use with CourtListener API responses
 const court: Court = {
