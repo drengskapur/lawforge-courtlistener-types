@@ -1,0 +1,57 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@20cf305ff2072d973412fa9b1e3a4f227bda3c76 # v2.14.0
+        with:
+          egress-policy: audit
+
+      - name: Checkout code
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: Extract version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # v1.1.4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ steps.get_version.outputs.VERSION }}
+          body: |
+            ## Changes
+
+            This release includes TypeScript type definitions for CourtListener API v${{ steps.get_version.outputs.VERSION }}.
+
+            ### Installation
+
+            ```bash
+            npm install --save-dev @types/lawforge__courtlistener@${{ steps.get_version.outputs.VERSION }}
+            ```
+
+            ### What's New
+
+            - Updated type definitions for CourtListener API
+            - Improved type safety and coverage
+            - Bug fixes and improvements
+
+            For a full list of changes, see the [commit history](https://github.com/drengskapur/lawforge-courtlistener-types/compare/v${{ steps.get_version.outputs.VERSION }}...main).
+          draft: false
+          prerelease: false
