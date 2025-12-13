@@ -57,7 +57,7 @@ This package includes development tools for maintaining type accuracy:
 npm run generate-openapi
 ```
 
-The generated OpenAPI specification in `tools/openapi/` is used to ensure type definitions match the actual API responses.
+The generated OpenAPI specification in `tools/openapi/` (e.g., `courtlistener-v4.3.0.openapi.json`) is used to ensure type definitions match the actual API responses.
 
 # Contributing
 

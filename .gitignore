@@ -31,6 +31,10 @@ Thumbs.db
 *.log
 logs/
 
+# Generated OpenAPI specs (keep the current version)
+tools/openapi/courtlistener-*.openapi.json
+!tools/openapi/courtlistener-v4.3.0.openapi.json
+
 # Runtime data
 pids
 *.pid

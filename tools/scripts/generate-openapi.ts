@@ -17,9 +17,16 @@ const __dirname = path.dirname(__filename);
 const API_BASE_URL =
 	process.env.COURTLISTENER_BASE_URL ?? "https://www.courtlistener.com/api/rest/v4/";
 const API_TIMEOUT_MS = Number(process.env.COURTLISTENER_TIMEOUT ?? "30000");
+
+// Read version from package.json
+const packageJson = JSON.parse(
+	await fs.readFile(path.join(__dirname, "..", "..", "..", "package.json"), "utf8")
+);
+const PACKAGE_VERSION = packageJson.version;
+
 const OUTPUT_PATH =
 	process.env.COURTLISTENER_OPENAPI_OUTPUT ??
-	path.join(__dirname, "..", "openapi", "courtlistener.openapi.json");
+	path.join(__dirname, "..", "openapi", `courtlistener-v${PACKAGE_VERSION}.openapi.json`);
 
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
