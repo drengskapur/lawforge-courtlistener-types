@@ -1,23 +1,14 @@
-# Installation
+# lawforge-courtlistener-types
+
+TypeScript definitions for the [CourtListener API](https://www.courtlistener.com/api/).
+
+## Installation
 
 ```bash
-npm install --save lawforge-courtlistener-types
+npm install lawforge-courtlistener-types
 ```
 
-# Summary
-This package contains type definitions for [CourtListener API](https://www.courtlistener.com/api/) (https://www.courtlistener.com/api/).
-
-# Details
-Files were exported from https://github.com/drengskapur/lawforge
-
-### Additional Details
-- Dependencies: none
-- Optional dependencies: none
-
-# Credits
-These definitions were written by [LawForge](https://github.com/drengskapur/lawforge).
-
-# Usage
+## Usage
 
 ```typescript
 import type {
@@ -28,7 +19,6 @@ import type {
   ApiCourt
 } from "lawforge-courtlistener-types";
 
-// Use with CourtListener API responses
 const court: Court = {
   id: "us",
   name: "Supreme Court of the United States",
@@ -36,13 +26,10 @@ const court: Court = {
   abbreviation: "SCOTUS"
 };
 
-// Use with API response types
 const response: CourtsResponse = await fetchCourts();
 ```
 
-# API Coverage
-
-This package provides TypeScript types for:
+## API Coverage
 
 - **Courts** - Federal and state court information
 - **Opinions** - Full court opinion texts and metadata
@@ -51,21 +38,21 @@ This package provides TypeScript types for:
 - **Citations** - Legal citation networks
 - **Search Results** - Search API responses
 
-# Development
-
-This package includes development tools for maintaining type accuracy:
+## Development
 
 ```bash
 # Generate fresh OpenAPI spec from CourtListener API
 npm run generate-openapi
 ```
 
-The generated OpenAPI specification in `tools/openapi/` (e.g., `courtlistener-v4.3.0.openapi.json`) is used to ensure type definitions match the actual API responses.
+The generated OpenAPI specification in `tools/openapi/` is used to ensure type definitions match the actual API responses.
 
-# Contributing
+## Contributing
 
-This is a type definition package for the CourtListener API. The types are maintained to match the official CourtListener API.
+For issues with these type definitions, please [open an issue](https://github.com/drengskapur/lawforge-courtlistener-types/issues).
 
-For issues with the CourtListener API itself, please see the [CourtListener API documentation](https://www.courtlistener.com/api/).
+For issues with the CourtListener API itself, see the [CourtListener API documentation](https://www.courtlistener.com/api/).
 
-For issues with these type definitions, please report them in the [LawForge repository](https://github.com/drengskapur/lawforge).
+## License
+
+MIT
