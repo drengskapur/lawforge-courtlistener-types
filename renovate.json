@@ -31,6 +31,7 @@
     },
     {
       "description": "Be more conservative with major updates for types packages",
+      "matchPackagePatterns": ["^@types/"],
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"],
       "schedule": ["before 4am on Monday"],
