@@ -43,7 +43,7 @@
   "bugs": {
     "url": "https://github.com/drengskapur/lawforge-courtlistener-types/issues"
   },
-  "homepage": "https://drengskapur.github.io/lawforge-courtlistener-types",
+  "homepage": "https://lawforge-courtlistener-types.readthedocs.io",
   "keywords": [
     "typescript",
     "types",
