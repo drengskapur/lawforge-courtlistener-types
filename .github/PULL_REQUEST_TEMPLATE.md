@@ -15,16 +15,19 @@ Brief description of the changes in this PR.
 ## Changes Made
 
 ### Type Definitions
+
 - [ ] Added new type definitions
 - [ ] Updated existing type definitions
 - [ ] Removed deprecated types
 
 ### Testing
+
 - [ ] Updated test cases
 - [ ] Added new test coverage
 - [ ] All tests pass
 
 ### Documentation
+
 - [ ] Updated README.md
 - [ ] Updated inline documentation
 - [ ] Added migration guide (if breaking change)

@@ -1,106 +1,60 @@
-# Dependencies
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-# Build outputs
-dist/
-build/
-*.tsbuildinfo
-
-# IDE and editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS generated files
+!.vscode/extensions.json
+!tools/openapi/courtlistener-v4.3.0.openapi.json
+._*
+.biome-cache
+.cache
+.cache/
 .DS_Store
 .DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Logs
-*.log
-logs/
-
-# Generated OpenAPI specs (keep the current version)
-tools/openapi/courtlistener-*.openapi.json
-!tools/openapi/courtlistener-v4.3.0.openapi.json
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
-coverage/
-*.lcov
-
-# nyc test coverage
-.nyc_output
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Optional npm cache directory
+.env
+.env.local
+.env.production
+.env.test
+.history/*
+.idea/
+.next
+.node_repl_history
 .npm
-
-# Optional biome cache
-.biome-cache
-
-# Microbundle cache
+.nuxt
+.nyc_output
+.out
+.parcel-cache
 .rpt2_cache/
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env
-.env.test
-.env.local
-.env.production
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-.parcel-cache
-
-# Next.js build output
-.next
-
-# Nuxt.js build / generate output
-.nuxt
-dist
-
-# Gatsby files
-.cache/
-public
-
-# Storybook build outputs
-.out
+.Spotlight-V100
 .storybook-out
-
-# Temporary folders
-tmp/
+.Trashes
+.vscode/
+.yarn-integrity
+*.lcov
+*.log
+*.pid
+*.pid.lock
+*.seed
+*.swo
+*.swp
+*.tgz
+*.tsbuildinfo
+*.tsbuildinfo
+*~
+build/
+coverage/
+dist
+dist/
+ehthumbs.db
+lerna-debug.log*
+logs/
+node_modules
+node_modules/
+npm-debug.log*
+pids
+pnpm-debug.log*
+public
 temp/
-
-# Editor directories and files
-!.vscode/extensions.json
-.history/*
+Thumbs.db
+tmp/
+tools/openapi/courtlistener-*.openapi.json
+yarn-debug.log*
+yarn-error.log*
