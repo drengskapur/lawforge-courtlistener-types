@@ -45,9 +45,19 @@
     "url": "https://github.com/drengskapur/lawforge-courtlistener-types/issues"
   },
   "homepage": "https://lawforge-courtlistener-types.readthedocs.io",
-  "keywords": ["typescript", "types", "courtlistener", "legal", "api", "zod", "definitions"],
+  "keywords": [
+    "typescript",
+    "types",
+    "courtlistener",
+    "legal",
+    "api",
+    "zod",
+    "definitions"
+  ],
   "engines": {
     "node": ">=20.0.0"
   },
-  "files": ["index.d.ts"]
+  "files": [
+    "index.d.ts"
+  ]
 }
