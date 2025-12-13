@@ -1,0 +1,61 @@
+site_name: CourtListener TypeScript Types
+site_description: TypeScript type definitions for the CourtListener legal research API
+site_url: https://drengskapur.github.io/lawforge-courtlistener-types
+repo_url: https://github.com/drengskapur/lawforge-courtlistener-types
+repo_name: drengskapur/lawforge-courtlistener-types
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Quick Start: quick-start.md
+  - API Reference:
+    - Courts: courts.md
+    - Search Results: search.md
+    - Opinions: opinions.md
+    - Dockets: dockets.md
+    - Citations: citations.md
+    - Utility Types: types.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/drengskapur/lawforge-courtlistener-types
+    - icon: fontawesome/brands/npm
+      link: https://www.npmjs.com/package/@types/lawforge__courtlistener
